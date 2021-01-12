@@ -5,11 +5,9 @@ Home: https://github.com/allenai/ai2thor
 
 Package license: Apache-2.0
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/ai2thor-feedstock/blob/master/LICENSE.txt)
 
 Summary: AI2 Thor is a lightweight AI framework that interacts with the Unity3d Game Engine.
-
-
 
 Current build status
 ====================
