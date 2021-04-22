@@ -1,5 +1,5 @@
 {% set name = "ai2thor" %}
-{% set version = "2.6.2" %}
+{% set version = "3.0.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 1bcb6d21cc6982456ffd41b630ba725052883dbb01c1bf24cef2301e44dc6c74
+  sha256: ebd212969cdddfeeb2f851c9ee173af2ae3d07971e269a779357c3949efd1d91
 
 build:
   number: 0
