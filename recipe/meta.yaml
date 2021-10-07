@@ -19,18 +19,17 @@ requirements:
   host:
     - pip
     - pytest-runner
-    - python
+    - python >= 3.6
   run:
     - aws-requests-auth
-    - botocore
     - flask
     - msgpack-python
     - numpy
     - opencv
     - pillow
     - progressbar2
-    - python
-    - pyyaml
+    - python >= 3.6
+    - python-xlib
     - requests
     - werkzeug >=0.15.0
 
