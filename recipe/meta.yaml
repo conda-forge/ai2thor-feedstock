@@ -19,7 +19,7 @@ requirements:
   host:
     - pip
     - pytest-runner
-    - python >= 3.6
+    - python>=3.6
   run:
     - aws-requests-auth
     - flask
@@ -28,7 +28,7 @@ requirements:
     - opencv
     - pillow
     - progressbar2
-    - python >= 3.6
+    - python>=3.6
     - python-xlib
     - requests
     - werkzeug >=0.15.0
