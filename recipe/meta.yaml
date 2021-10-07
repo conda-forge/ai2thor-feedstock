@@ -11,7 +11,7 @@ source:
   sha256: 1bcb6d21cc6982456ffd41b630ba725052883dbb01c1bf24cef2301e44dc6c74
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -19,18 +19,17 @@ requirements:
   host:
     - pip
     - pytest-runner
-    - python
+    - python >=3.6
   run:
     - aws-requests-auth
-    - botocore
     - flask
     - msgpack-python
     - numpy
     - opencv
     - pillow
     - progressbar2
-    - python
-    - pyyaml
+    - python >=3.6
+    - python-xlib
     - requests
     - werkzeug >=0.15.0
 
@@ -49,3 +48,4 @@ about:
 extra:
   recipe-maintainers:
     - systemshift
+    - ekolve
