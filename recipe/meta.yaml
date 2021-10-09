@@ -11,7 +11,7 @@ source:
   sha256: 3acc762fd3a49b119228e893c501843f62f0190e3870eacc316934ff03a61d1b
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -30,6 +30,7 @@ requirements:
     - progressbar2
     - python >=3.6
     - python-xlib
+    - botocore
     - requests
     - werkzeug >=0.15.0
 
