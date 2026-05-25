@@ -1,5 +1,6 @@
 {% set name = "ai2thor" %}
-{% set version = "4.2.0" %}
+{% set version = "5.0.0" %}
+{% set python_min = "3.10" %}
 
 
 package:
@@ -7,19 +8,19 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 67c44ca367d963189be82f86357a6b5f5265f27874bc631e756fb0e567c7f1c5
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 652298820c3c677579fc179232f1ccac0d5b9bc98b1f59baf7c0698d0e478758
 
 build:
   number: 0
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
     - pip
-    - pytest-runner
-    - python >=3.6
+    - python {{ python_min }}
+    - setuptools
   run:
     - aws-requests-auth
     - flask
@@ -28,13 +29,17 @@ requirements:
     - opencv
     - pillow
     - progressbar2
-    - python >=3.6
+    - python >={{ python_min }}
     - python-xlib
+    - pyyaml
     - botocore
     - requests
     - werkzeug >=0.15.0
 
 test:
+  requires:
+    - python {{ python_min }}
+    - pytest-runner
   imports:
     - ai2thor
     - ai2thor.util
@@ -43,7 +48,6 @@ about:
   home: https://github.com/allenai/ai2thor
   summary: AI2 Thor is a lightweight AI framework that interacts with the Unity3d Game Engine.
   license: Apache-2.0
-  # check later once the license file is included in the source distribution 
   license_file: LICENSE
 
 extra:
